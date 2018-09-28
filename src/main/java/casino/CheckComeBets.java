@@ -14,6 +14,11 @@ public class CheckComeBets {
     private ComeBets winBet;
     private ComeBets loseBet;
 
+    public CheckComeBets() {
+        points = new ArrayList<>(Arrays.asList(4, 5, 6, 8, 9, 10));
+        craps = new ArrayList<>(Arrays.asList(2, 3, 12));
+    }
+
     ComeBets getWinBet() {
         return winBet;
     }
@@ -22,12 +27,6 @@ public class CheckComeBets {
         return loseBet;
     }
 
-    public CheckComeBets() {
-        points = new ArrayList<>(Arrays.asList(4, 5, 6, 8, 9, 10));
-        craps = new ArrayList<>(Arrays.asList(2, 3, 12));
-    }
-
-
     void check(Dice dice, ComeBets bet, CrapGame game) {
         winBet = null;
         loseBet = null;
@@ -35,11 +34,10 @@ public class CheckComeBets {
             if (craps.contains(dice.getSum())) {
                 if (bet.isComeBet)
                     loseBet = bet;
-                else
-                    if (dice.getSum() == 2 || dice.getSum() == 3) {
-                        winBet = bet;
-                        winBet.setOdd(2);
-                    }
+                else if (dice.getSum() == 2 || dice.getSum() == 3) {
+                    winBet = bet;
+                    winBet.setOdd(2);
+                }
             }
             if (dice.getSum() == 11) {
                 if (bet.isComeBet) {

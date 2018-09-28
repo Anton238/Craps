@@ -6,5 +6,4 @@ import crapsBets.CrapBet;
 public abstract class PropositionsBet extends CrapBet {
 
     public abstract boolean isWin(Dice dice);
-
 }

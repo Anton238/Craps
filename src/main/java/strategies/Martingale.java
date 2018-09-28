@@ -8,14 +8,13 @@ import statistics.Statistics;
 
 public class Martingale extends Strategy {
 
+    int currentBet;
+    int minBet;
     public Martingale(int baseBet) {
         super(baseBet);
         currentBet = baseBet;
         minBet = baseBet;
     }
-
-    int currentBet;
-    int minBet;
 
     @Override
     public CrapBet nextBet(Player p) {

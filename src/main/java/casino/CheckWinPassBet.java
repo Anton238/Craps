@@ -16,26 +16,26 @@ public class CheckWinPassBet {
     private PassBet loseBet;
 
 
-    public PassBet getWinBet() {
-        return winBet;
+    public CheckWinPassBet() {
+        points = new ArrayList<>(Arrays.asList(4, 5, 6, 8, 9, 10));
+        craps = new ArrayList<>(Arrays.asList(2, 3, 12));
+        this.shouldSwitchTo = GameState.PointOff;
     }
 
-    public PassBet getLoseBet() {
-        return loseBet;
+    public PassBet getWinBet() {
+        return winBet;
     }
 
     void setWinBet(PassBet winBet) {
         this.winBet = winBet;
     }
 
-    void setLoseBet(PassBet loseBet) {
-        this.loseBet = loseBet;
+    public PassBet getLoseBet() {
+        return loseBet;
     }
 
-    public CheckWinPassBet() {
-        points = new ArrayList<>(Arrays.asList(4, 5, 6, 8, 9, 10));
-        craps = new ArrayList<>(Arrays.asList(2, 3, 12));
-        this.shouldSwitchTo = GameState.PointOff;
+    void setLoseBet(PassBet loseBet) {
+        this.loseBet = loseBet;
     }
 
     public GameState getShouldSwitchTo() {

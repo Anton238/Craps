@@ -71,7 +71,7 @@ public class CrapGame extends Game {
         Player shooter;
 
         while (players.size() > 0) {
-            shooter = shooterService.chooseShooter(players,dice);
+            shooter = shooterService.chooseShooter(players, dice);
             int currSize;
             for (int i = 0; i < players.size() && players.size() != 0; i++) {
                 currSize = players.size();
@@ -85,6 +85,7 @@ public class CrapGame extends Game {
                 System.out.println("Bank has:");
                 System.out.println(entry.getKey() + " " + entry.getValue());
             }
+            System.out.println();
 
             if (players.size() == 0) {
                 bank.dealWithHouse(house);
@@ -93,27 +94,28 @@ public class CrapGame extends Game {
             }
 
             int diceResult = shooter.throwDice(dice);
-            System.out.println("dice result: " + diceResult + "double " + dice.isHardWays());
+            System.out.println("Dice result: " + diceResult + ", double: " + dice.isHardWays());
             bank.checkWin(dice, this);
             // change shooter if nessesary
             bank.dealWithHouse(house);
             bank.clearBankBets();
-            System.out.println("Players after cycle");
+
+            System.out.println("Players after cycle:");
             for (Player p : players)
                 System.out.println(p);
+            System.out.println();
+
             System.out.println("Full Statistics:");
-            for (StatisticsEntry entry : Statistics.getStatistics()) {
+            for (StatisticsEntry entry : Statistics.getStatistics())
                 System.out.println(entry.toString());
-            }
             System.out.println();
 
             System.out.println("Statistics for players money in roll:");
-            for (HashSet<PlayerTotalRollEntry> entry : Statistics.getPlayerRollMoney()) {
+            for (HashSet<PlayerTotalRollEntry> entry : Statistics.getPlayerRollMoney())
                 System.out.println(entry.toString());
-            }
             System.out.println();
 
-            System.out.println(" MONEY IN HOUSE = " + house.getHouseMoney());
+            System.out.println("MONEY IN HOUSE = " + house.getHouseMoney());
         }
     }
 
@@ -127,7 +129,6 @@ public class CrapGame extends Game {
     public void removePlayer(Player p) {
         players.remove(p);
     }
-
 
 
 }

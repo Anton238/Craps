@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ComeBetsTest {
     @Test
-    public void betCreaionTest(){
+    public void betCreaionTest() {
         CrapBet comeBets = new ComeBets();
         Assert.assertTrue(comeBets.odd == 1 && comeBets.getSum() == 5);
     }

@@ -5,7 +5,8 @@ public class Dice {
     private int number2;
     private int sum;
 
-    public Dice() { }
+    public Dice() {
+    }
 
     public Dice(int number1, int number2) {
         this.number1 = number1;
@@ -13,9 +14,9 @@ public class Dice {
         this.sum = number1 + number2;
     }
 
-    public int getRandomDicesResult(){
-        number1 = (int)(1 + Math.random()*6);
-        number2 = (int)(1 + Math.random()*6);
+    public int getRandomDicesResult() {
+        number1 = (int) (1 + Math.random() * 6);
+        number2 = (int) (1 + Math.random() * 6);
         sum = number1 + number2;
         return sum;
     }
@@ -35,13 +36,14 @@ public class Dice {
     public boolean isHardWays() {
         return getNumber1() == getNumber2();
     }
+
     @Override
     public String toString() {
         return "Dice{" +
                 "number1 = " + number1 +
                 ", number2 = " + number2 +
                 ", sum = " + sum +
-                ", is double - " + isHardWays()+
+                ", is double - " + isHardWays() +
                 '}';
     }
 }

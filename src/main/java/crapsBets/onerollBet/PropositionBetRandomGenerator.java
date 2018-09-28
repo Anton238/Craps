@@ -14,8 +14,8 @@ public class PropositionBetRandomGenerator {
                     new SevenBet(),
                     new IndividualPropositionBet()));
 
-    public PropositionsBet getRandomPropositionBet(){
-        int index = (int)(Math.random()*5);
+    public PropositionsBet getRandomPropositionBet() {
+        int index = (int) (Math.random() * 5);
         return propositionBetList.get(index);
     }
 }

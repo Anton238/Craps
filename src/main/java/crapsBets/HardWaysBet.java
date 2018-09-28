@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class HardWaysBet extends CrapBet {
     private int numer;
-    private ArrayList<Integer>  numerList;
+    private ArrayList<Integer> numerList;
 
     public HardWaysBet() {
         numerList = new ArrayList(Arrays.asList(4, 6, 8, 10));

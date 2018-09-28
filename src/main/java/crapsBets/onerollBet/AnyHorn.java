@@ -15,7 +15,7 @@ public class AnyHorn extends PropositionsBet {
 
     @Override
     public boolean isWin(Dice dice) {
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2,3,11,12));
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2, 3, 11, 12));
         return list.contains(dice.getSum());
     }
 

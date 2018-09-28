@@ -7,7 +7,7 @@ import statistics.Statistics;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-public class Cancellation extends Strategy{
+public class Cancellation extends Strategy {
 
     final LinkedList<Integer> baseNums;
     LinkedList<Integer> currentNums;
@@ -40,7 +40,7 @@ public class Cancellation extends Strategy{
                 currentNums.removeFirst();
                 currentNums.removeLast();
             } else {
-                if(Statistics.isLastLose(p))
+                if (Statistics.isLastLose(p))
                     currentNums.add(currentNums.getFirst() + currentNums.getLast());
             }
         }

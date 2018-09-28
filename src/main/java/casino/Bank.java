@@ -103,9 +103,10 @@ public class Bank {
     }
 
     public void dealWithHouse(House house) {
-        System.out.println("Bank TotalAmount after round " + totalAmount);
+        System.out.println("Bank TotalAmount after round: " + totalAmount);
         house.addHouseMoney(totalAmount);
         totalAmount = 0;
+        System.out.println();
     }
 
     private int resolveWinPassBet(CheckWinPassBet checkWinPassBet, int countWinBet,

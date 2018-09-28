@@ -24,8 +24,8 @@ public class PlayerTotalRollEntry {
         return totalSum;
     }
 
-    public void addRemoveTotalAmount(int summ){
-        this.totalSum = totalSum + summ;
+    public void addRemoveTotalAmount(int sum) {
+        this.totalSum = totalSum + sum;
     }
 
     @Override
