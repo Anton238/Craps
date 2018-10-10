@@ -93,7 +93,7 @@ public class CrapGame extends Game {
             int diceResult = shooter.throwDice(dice);
             System.out.println("Dice result: " + diceResult + ", double: " + dice.isHardWays());
             bank.checkWin(dice, this);
-            // change shooter if nessesary
+            //change shooter if necessary
             bank.dealWithHouse(house);
             bank.clearBankBets();
 
