@@ -86,7 +86,7 @@ public class Bank {
     private void payWinners(Player p, CrapBet bet, PlayerTotalRollEntry playerTotalRollEntry) {
         int sumToPayToWinner = 0;
         sumToPayToWinner += bet.getSum() * bet.getOdd();
-        System.out.println("Player " + p.getName() + " won " + sumToPayToWinner + " with bet" + bet.toString());
+        System.out.println("Player " + p.getName() + " won " + sumToPayToWinner + " with bet " + bet.toString());
         p.addMoney(sumToPayToWinner);
         totalAmount -= sumToPayToWinner;
         playerTotalRollEntry.addRemoveTotalAmount(sumToPayToWinner);
@@ -94,11 +94,11 @@ public class Bank {
     }
 
     private void withdrawLoses(Player p, CrapBet bet, PlayerTotalRollEntry playerTotalRollEntry) {
-        int sumToSubstractFromLoser = bet.getSum();
-        System.out.println("Player " + p.getName() + " lose " + sumToSubstractFromLoser + " with bet" + bet.toString());
-        p.transferMoney(sumToSubstractFromLoser);
-        totalAmount += sumToSubstractFromLoser;
-        playerTotalRollEntry.addRemoveTotalAmount(sumToSubstractFromLoser * (-1));
+        int sumToSubtractFromLoser = bet.getSum();
+        System.out.println("Player " + p.getName() + " lose " + sumToSubtractFromLoser + " with bet" + bet.toString());
+        p.transferMoney(sumToSubtractFromLoser);
+        totalAmount += sumToSubtractFromLoser;
+        playerTotalRollEntry.addRemoveTotalAmount(sumToSubtractFromLoser * (-1));
     }
 
     public void dealWithHouse(House house) {
