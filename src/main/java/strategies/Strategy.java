@@ -1,10 +1,8 @@
 package strategies;
 
-
 import crapsBets.CrapBet;
 import crapsBets.PassBet;
 import players.Player;
-
 
 public abstract class Strategy {
     public int baseBet;

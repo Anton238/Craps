@@ -7,7 +7,6 @@ import java.util.HashSet;
 import java.util.LinkedList;
 
 public class Statistics {
-
     final private static int CAPACITY = 7;
     final private static int CAPACITY2 = 2;
     private static LinkedList<StatisticsEntry> statistics = new LinkedList<>();
@@ -62,6 +61,4 @@ public class Statistics {
         }
         return false;
     }
-
-
 }

@@ -2,8 +2,7 @@ package crapsBets;
 
 
 public class PassBet extends CrapBet {
-
-    private int passOrNotType; //1 pass 2 not pass
+    private int passOrNotType; //1 pass, 2 not pass
 
     public PassBet(int passOrNot) {
         this.passOrNotType = passOrNot;

@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AnyHorn extends PropositionsBet {
-
     AnyHorn() {
         super();
         this.odd = 8;

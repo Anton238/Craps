@@ -53,7 +53,6 @@ public class CheckComeBets {
                     winBet.setOdd(2);
                 }
             }
-
         }
 
         if (points.contains(dice.getSum())) {
@@ -69,7 +68,6 @@ public class CheckComeBets {
                     game.setComePoint(0);
                     bet.setMoveToPoint(0);
                 }
-
             }
         }
         if (dice.getSum() == 7 && bet.moveToPoint != 0) {

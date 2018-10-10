@@ -1,13 +1,10 @@
 package strategies;
 
-
 import crapsBets.CrapBet;
 import players.Player;
 import statistics.Statistics;
 
-
 public class Martingale extends Strategy {
-
     int currentBet;
     int minBet;
     public Martingale(int baseBet) {

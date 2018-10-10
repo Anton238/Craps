@@ -5,17 +5,14 @@ import players.Player;
 
 import java.util.Scanner;
 
-
 public class GameManager {
     public CrapGame craps;
     private House house;
-
 
     public GameManager() {
         this.house = new House(5, 1000);
         this.craps = new CrapGame();
         house.addToGames(craps);
-
     }
 
     public static void main(String[] args) {
@@ -23,7 +20,6 @@ public class GameManager {
         gameManager.createPlayersForCrapsGame();
         System.out.println(gameManager.craps.getPlayers());
         gameManager.craps.start(gameManager.house);
-
     }
 
     public void createPlayersForCrapsGame() {

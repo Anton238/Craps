@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AnyCraps extends PropositionsBet {
-
     AnyCraps() {
         super();
         this.odd = 8;

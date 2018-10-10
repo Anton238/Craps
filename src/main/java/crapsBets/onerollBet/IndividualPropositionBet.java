@@ -6,30 +6,30 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class IndividualPropositionBet extends PropositionsBet {
-    private int numer;
-    private ArrayList<Integer> numerList;
+    private int number;
+    private ArrayList<Integer> numberList;
 
     public IndividualPropositionBet() {
-        numerList = new ArrayList(Arrays.asList(2, 3, 12, 11));
-        numer = getRandomNumber();
-        this.odd = getOddForNumber(numer);
+        numberList = new ArrayList(Arrays.asList(2, 3, 12, 11));
+        number = getRandomNumber();
+        this.odd = getOddForNumber(number);
         this.sum = 5;
     }
 
-    public IndividualPropositionBet(int numer) {
-        numerList = new ArrayList(Arrays.asList(2, 3, 12, 11));
-        this.numer = numer;
-        this.odd = getOddForNumber(numer);
+    public IndividualPropositionBet(int number) {
+        numberList = new ArrayList(Arrays.asList(2, 3, 12, 11));
+        this.number = number;
+        this.odd = getOddForNumber(number);
     }
 
     @Override
     public boolean isWin(Dice dice) {
-        return dice.getSum() == this.numer;
+        return dice.getSum() == this.number;
     }
 
     private int getRandomNumber() {
         int index = (int) (Math.random() * 4);
-        return numerList.get(index);
+        return numberList.get(index);
     }
 
     private int getOddForNumber(int num) {
@@ -41,7 +41,7 @@ public class IndividualPropositionBet extends PropositionsBet {
     @Override
     public String toString() {
         return "IndividualPropositionBet{" +
-                "number = " + numer +
+                "number = " + number +
                 ", sum = " + sum +
                 ", odd = " + odd +
                 '}';

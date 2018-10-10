@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Cancellation extends Strategy {
-
     final LinkedList<Integer> baseNums;
     LinkedList<Integer> currentNums;
 

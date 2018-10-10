@@ -25,7 +25,6 @@ public class StatisticsEntry {
         return losePlayers.contains(p);
     }
 
-
     @Override
     public String toString() {
         return "StatisticsEntry{" +

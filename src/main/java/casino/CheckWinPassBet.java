@@ -15,7 +15,6 @@ public class CheckWinPassBet {
     private PassBet winBet;
     private PassBet loseBet;
 
-
     public CheckWinPassBet() {
         points = new ArrayList<>(Arrays.asList(4, 5, 6, 8, 9, 10));
         craps = new ArrayList<>(Arrays.asList(2, 3, 12));

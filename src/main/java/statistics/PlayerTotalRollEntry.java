@@ -3,7 +3,6 @@ package statistics;
 import players.Player;
 
 public class PlayerTotalRollEntry {
-
     private Player player;
     private int totalSum;
 

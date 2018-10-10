@@ -72,7 +72,6 @@ public class Bank {
                 looserPlayersPassBets.add(playerToCheck);
             }
             totalRollEntries.add(playerTotalRollEntry);
-
         }
 
         game.switchStateTo(checkWinPassBet.getShouldSwitchTo());
@@ -132,7 +131,9 @@ public class Bank {
     public void resolveComeBets(Dice dice, ComeBets bet, CrapGame game,
                                 Player playerTocheck, CheckComeBets checkComeBets,
                                 PlayerTotalRollEntry playerTotalRollEntry) {
+
         checkComeBets.check(dice, bet, game);
+
         if ((checkComeBets.getWinBet()) != null) {
             payWinners(playerTocheck, checkComeBets.getWinBet(), playerTotalRollEntry);
             playerTocheck.setComeBets(null);
@@ -141,7 +142,6 @@ public class Bank {
             withdrawLoses(playerTocheck, bet, playerTotalRollEntry);
             playerTocheck.setComeBets(null);
         }
-
     }
 
     private void resolvePropositionBet(Dice diceResult, PropositionsBet propBet,
@@ -163,13 +163,13 @@ public class Bank {
             withdrawLoses(playerToCheck, bet, playerTotalRollEntry);
             playerToCheck.setHardWaysBet(null);
         }
-        if ((!diceResult.isHardWays()) && (diceResult.getSum() == bet.getNumer())) {
+        if ((!diceResult.isHardWays()) && (diceResult.getSum() == bet.getNumber())) {
             withdrawLoses(playerToCheck, bet, playerTotalRollEntry);
             playerToCheck.setHardWaysBet(null);
         }
     }
 
     private boolean isExactHardWaysMatch(Dice diceResult, HardWaysBet bet) {
-        return diceResult.isHardWays() && ((bet.getNumer() / 2) == diceResult.getNumber2());
+        return diceResult.isHardWays() && ((bet.getNumber() / 2) == diceResult.getNumber2());
     }
 }

@@ -5,7 +5,6 @@ import java.util.Arrays;
 
 
 public class PropositionBetRandomGenerator {
-
     private ArrayList<PropositionsBet> propositionBetList = new ArrayList<>
             (Arrays.asList(
                     new AnyCraps(),

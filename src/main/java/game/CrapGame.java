@@ -23,14 +23,12 @@ public class CrapGame extends Game {
     private int comePoint;
     private ShooterService shooterService;
 
-
     public CrapGame() {
         this.players = new LinkedList<>();
         this.dice = new Dice();
         this.bank = new Bank();
         this.state = GameState.PointOff;
         this.shooterService = new ShooterService();
-
     }
 
     public GameState getState() {
@@ -55,7 +53,6 @@ public class CrapGame extends Game {
 
     public void switchStateTo(GameState newState) {
         if (state != newState) state = newState;
-
     }
 
     public List<Player> getPlayers() {
@@ -129,6 +126,4 @@ public class CrapGame extends Game {
     public void removePlayer(Player p) {
         players.remove(p);
     }
-
-
 }

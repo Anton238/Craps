@@ -14,7 +14,7 @@ public class ShooterService {
 
     public Player chooseShooter(List<Player> players, Dice dice) {
         Player oldShooter = returnExistingShooter(players);
-        Player newShooter = null;
+        Player newShooter;
         if (oldShooter == null) {
             newShooter = createInitialShooter(players, dice);
             return newShooter;
@@ -63,5 +63,4 @@ public class ShooterService {
 
         return shooter;
     }
-
 }

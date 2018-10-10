@@ -8,7 +8,6 @@ import java.util.List;
 
 
 public class FieldBet extends PropositionsBet {
-
     FieldBet() {
         super();
         this.odd = 1;
